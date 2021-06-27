@@ -1,5 +1,5 @@
 {% set name = "pydifact" %}
-{% set version = "0.0.6" %}
+{% set version = "0.1.1" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pydifact-{{ version }}.tar.gz
-  sha256: c94293cb1b141d09be414f6676f35e5bfcbcaf0874f99639cb0305a9e2b9b972
+  sha256: 54e3f66cbba89818a812230119996338488842bef34b8545c38356fcdbb4d200
 
 build:
   number: 0
