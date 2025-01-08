@@ -7,20 +7,20 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pydifact-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/pydifact-{{ version }}.tar.gz
   sha256: 5853ce94e6e3983e7b330d7f0860b81be5c2b140b6ae1590d751b0cba5d78cc5
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
     - pip
-    - python >=3.6,<3.10
+    - python {{ python_min }}
   run:
-    - python >=3.6,<3.10
+    - python >={{ python_min }},<3.10
 
 test:
   imports:
@@ -30,6 +30,7 @@ test:
     - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/nerdocs/pydifact
