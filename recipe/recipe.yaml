@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: pydifact
-  version: 0.1.8
+  version: "0.2.1"
 
 package:
   name: ${{ name|lower }}
@@ -10,10 +10,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/pydifact-${{ version }}.tar.gz
-  sha256: 5853ce94e6e3983e7b330d7f0860b81be5c2b140b6ae1590d751b0cba5d78cc5
+  sha256: 7e17cfff9f0fa52235bf958fe17a133931b09d2c10add8797392b861743d301b
 
 build:
-  number: 2
+  number: 0
   noarch: python
   script: ${{ PYTHON }} -m pip install . -vv
 
@@ -23,7 +23,7 @@ requirements:
     - python ${{ python_min }}.*
     - setuptools
   run:
-    - python >=${{ python_min }},<3.10
+    - python >=${{ python_min }}
 
 tests:
   - python:
