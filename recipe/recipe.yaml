@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: pydifact
-  version: "0.2.1"
+  version: "0.2.3"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/pydifact-${{ version }}.tar.gz
-  sha256: 7e17cfff9f0fa52235bf958fe17a133931b09d2c10add8797392b861743d301b
+  sha256: fb68b9aa4c95f3ee360849d762ae662f3355b88a7781229d875976d1509bcda3
 
 build:
   number: 0
